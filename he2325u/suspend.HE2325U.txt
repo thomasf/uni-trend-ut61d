@@ -1,0 +1,6 @@
+the HE2325U USB interface on the UT61 meters will enter standby mode unless you turn off power saving functions for the USB device
+	sudo suspend.HE2325U.sh
+
+Script written by Ralf Burger
+http://www.erste.de/UT61/index.html
+
