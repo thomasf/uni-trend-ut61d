@@ -65,8 +65,6 @@
 
 if ($h) { &usage; exit; }			# show help and exit
 
-use Device::SerialPort; 			# Ubuntu/Debian: package libdevice-serialport-perl
-
 if ($t) { use Time::HiRes qw(gettimeofday); }	# should be present in a default installation
 						# if not present, -t option cannot be used
 
