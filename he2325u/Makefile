@@ -7,20 +7,14 @@
 
 all: he2325u
 
-CC=gcc
 CXX=g++
-COBJS=./hidapi/linux/hid-libusb.o
 CPPOBJS=./he2325u.o
 OBJS=$(COBJS) $(CPPOBJS)
-CFLAGS+=-I./hidapi/hidapi -Wall -g -c `pkg-config libusb-1.0 --cflags`
-LIBS=`pkg-config libusb-1.0 libudev --libs`
-
+CFLAGS+=-Wall -g -c `pkg-config libusb-1.0 hidapi-hidraw --cflags`
+LIBS=`pkg-config hidapi-hidraw libusb-1.0 libudev --libs`
 
 he2325u: $(OBJS)
 	g++ -Wall -g $^ $(LIBS) -o he2325u
-
-$(COBJS): %.o: %.c
-	$(CC) $(CFLAGS) $< -o $@
 
 $(CPPOBJS): %.o: %.cpp
 	$(CXX) $(CFLAGS) $< -o $@
