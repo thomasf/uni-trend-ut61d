@@ -4,6 +4,7 @@ RUN \
   apt-get install -y libhidapi-dev
 
 RUN apt-get install -y build-essential
+RUN apt-get install -y pkg-config
 
 ADD . /opt/ut61d
 WORKDIR /opt/ut61d
