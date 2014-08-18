@@ -30,6 +30,13 @@ sudo ./startdmm.sh
 
 ### Using docker/fig
 
+The reason for this docker/fig setup is to have a reproduceable way of
+verifying that stuff works without being restricted by local differences in
+config etc. At the moment the he2325u/suspend.HE2325U.sh script actually only
+runs without spitting out errors under docker for me.
+
+The docker container is run with elevated access rights to be able to use USB.
+
 Launch using fig:
 
 ``` shell
