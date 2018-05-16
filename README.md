@@ -2,6 +2,7 @@
 
 Downloaded from https://perhof.wordpress.com/2012/05/10/uni-t-ut61d-for-linux/
 
+NOTE: I don't use this anymore, I'm just using sigrok instead: https://sigrok.org/
 
 ## Usage
 
